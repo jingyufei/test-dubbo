@@ -31,7 +31,7 @@ public class HttpTest2 {
 	
 	@Test
 	public void testSaveUser() throws IOException{
-		User user = new User("小明", 20);
+		User user = new User(2, "小明", 20);
  		String responseStr = HttpProxy.postJson("http://localhost:9002/provider/userInfo/saveUser",FastJsonConvert.convertObjectToJSON(user));
  		System.out.println(responseStr);
 	}
